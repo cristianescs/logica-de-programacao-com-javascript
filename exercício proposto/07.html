@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Proposto 07</title>
+</head>
+
+<body>
+    <script>
+        /* PROBLEMA: mostre na tela todos os anos a partir de 1004 até o ano 2017, pulando de quatro em quatro anos.*/
+
+        //usando for
+        // x -> ano
+        for (x = 1004; x <= 2017; x++){
+            var resto = x % 4;
+            if (resto == 0){
+                document.write(x + "<br>");
+            }
+            
+        }
+
+        //usando while 
+
+        /*
+        var ano = 1004;
+        while (ano <= 2017){
+            document.write(ano + "<br>");
+            ano += 4; //ano = ano + 4;
+        }
+        */
+    </script>
+</body>
+
+</html>

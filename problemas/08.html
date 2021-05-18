@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 08</title>
+</head>
+
+<body>
+
+    <h2>Tabuada do número de 1 a 1000</h2>
+
+    <button onclick="mostrarTabuada()">Criar Tabuada</button>
+    <button onclick="limparTabuada()">Limpar tabuada</button>
+    <hr>
+    <div id="output"></div>
+
+    <script>
+        /* PROBLEMA: Pedir para o usuário digitar um número e mostrar a tabuada desse número de 1 a 1000. Deve ter a possibilidade do usuário digitar outro número e também limpar a tabuada gerada previamente.*/
+
+        var output = document.querySelector('#output');
+        var mensagem = '';    
+
+        function mostrarTabuada(){
+                //perguntar o numero para o usuario
+                var n = prompt('Digite um numero:');   
+                limparTabuada();  
+                //converter o numero
+                n = parseFloat(n);
+                //criar uma variavel que servira de indice
+                //enquanto indice <= 1000
+                    //concatena na variavel mensagem
+                    
+                    for (var i=1; i<=1001; i++){
+                    var resultado = n*i;
+                    mensagem += n + ' x '+ i + ' = ' + resultado + ' <br>';
+                    i++;
+                }
+                //mostra mensagem no output
+                output.innerHTML = mensagem;
+            }
+            
+            function limparTabuada(){
+                mensagem = '';
+                output.innerHTML = mensagem;
+            }
+            
+              
+    </script>
+</body>
+
+</html>

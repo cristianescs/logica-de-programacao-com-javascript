@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 07</title>
+</head>
+<body>
+
+    <h2>
+        Tabuada do número de 1 a 1000
+    </h2>
+
+    <script>
+        /* PROBLEMA: Pedir para o usuário digitar um número e mostrar a tabuada desse número de 1 a 1000*/
+
+        //usando for
+
+        var n = prompt("Digite um número");
+        n = parseFloat(n);
+
+        for (x = 1; x <= 1000; x++){
+            var resultado = n * x;
+            document.write(n + " x " + x +  " = " + resultado + "<br>");
+        }
+        document.write("Fim da multiplicação");
+
+        //usando while
+
+        /*
+        var x = 1;
+
+        while(x <= 1000){
+            var resultado = n * x;
+            document.write(n + " x " + x +  " = " + resultado + "<br>");
+            x++;
+        }
+        */
+
+        //usando do... while...
+
+         /*
+        var x = 1;
+
+        do{
+             var resultado = n * x;
+            document.write(n + " x " + x +  " = " + resultado + "<br>");
+            x++;
+        }
+        while(x <= 1000)
+        */
+
+    </script>
+</body>
+</html>

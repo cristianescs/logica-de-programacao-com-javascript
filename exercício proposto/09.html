@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Proposto 09</title>
+</head>
+
+<body>
+
+    <h2>Calculadora Simples</h2>
+
+    <button onclick="somar()">+</button>
+    <button onclick="subtrair()">-</button>
+    <button onclick="multiplicar()">*</button>
+    <button onclick="dividir()">/</button>
+    <hr>
+    <div id="output"></div>
+
+    <script>
+
+    var n = prompt('Digite um numero:');
+    n = parseFloat(n);
+            
+    escreve(); 
+
+    function escreve(){
+        var output = document.querySelector('#output');
+        output.innerHTML = n;
+    }
+        
+
+    function somar(){
+        var x = prompt('Somar ' + n + ' com:' );  
+        x = parseFloat(x);
+        n += x;
+        escreve();
+    }
+
+    function subtrair(){
+        var x = prompt('Subtrair ' + n + ' com:');  
+        x = parseFloat(x);
+        n -= x;
+        escreve();
+    }
+
+    function dividir(){
+        var x = prompt('Dividir ' + n + ' por:');  
+        x = parseFloat(x);
+        n = n / x;
+        escreve();
+    }
+
+    function multiplicar(){
+        var x = prompt('Multiplicar ' + n + ' com:');  
+        x = parseFloat(x);
+        n = n * x;
+        escreve();
+        }
+              
+    </script>
+</body>
+
+</html>

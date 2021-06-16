@@ -29,20 +29,34 @@
             output.innerHTML = mensagem;
         }
 
-        function iniciarCalculo(simbolo){
-            var n1 = document.querySelector('#output').textContent; // n1 vai receber o texto que está no elemento #output
+        function iniciarCalculo(simbolo) {
+            var n1 = document.querySelector('#output')
+            .textContent; // n1 vai receber o texto que está no elemento #output
             n1 = parseFloat(n1);
             //text content não aceita tags html
 
             var n2 = prompt('Digite outro número:')
             n2 = parseFloat(n2);
 
-            var msg = calcular(simbolo, n1, n2);
-
+            //interceptar quando o erro acontecer
+            try {
+                var msg = calcular(simbolo, n1, n2);
+            } catch (e) {
+                alert(e);
+                return;
+            }
             escreve(msg);
         }
 
         function calcular(simbolo, n1, n2) {
+
+            if (simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/') {
+                throw new Error("Digite um símbolo válido");
+            }
+
+            if (isNaN(n1) || isNaN(n2)) {
+                throw new Error('É aceito somente números'); //disparar erro no console
+            }
 
             var numeroCalculado = null;
 
@@ -60,7 +74,7 @@
                     numeroCalculado = n1 - n2;
                     break;
             }
-            
+
             return numeroCalculado;
         }
     </script>

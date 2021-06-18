@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Proposto 12</title>
+</head>
+
+<body>
+
+    <script>
+        //mostrar qual o dia da semana que a página está sendo aberta no browser.
+
+        var dias = new Array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta','sábado');
+
+        var hoje = new Date();
+        var diaSemana = hoje.getDay(); //retorna o dia da semana
+
+        /* 
+        0 - domingo
+        1- segunda
+        2- terça
+        ...
+        6- sábado
+        */
+
+        for (var i = 0; i < dias.length; i++){
+            if (diaSemana == i){
+                alert('Bem vindo(a), hoje é ' + dias[i] + '!');
+            }
+        }
+
+
+       
+
+    </script>
+   
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 12</title>
+</head>
+
+<body>
+
+    <h1>Lógica de programação com JavaScript</h1>
+
+    <div id="output"></div>
+   
+    <script>
+        var produtos = new Array('caneta', 'lápis', 'tesoura', 'borracha', 'caderno', 'livro');
+
+        produtos.push('compasso' , 'cartolina');
+
+        // document.querySelector('#output').innerHTML = produtos.toString(); //array -> string
+
+        var output = document.querySelector('#output');
+
+        var msg = '';
+
+        for (var i = 0; i < produtos.length; i++){
+
+            msg += 'Produto ' + (i+1) + ': ' + produtos[i] + '</br>';
+        }
+
+        output.innerHTML = msg;
+
+    </script>
+   
+</body>
+
+</html>

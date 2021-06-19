@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 13</title>
+</head>
+
+<body>
+
+    <h1>Lógica de programação com JavaScript</h1>
+
+    <div id="output"></div>
+   
+    <script>
+       
+       //Mostrar na tela todos os dados de um produto específico, contendo quantidade em estoque e preço. Estes dados estarão agrupado em um objeto.
+
+       var output = document.querySelector('#output');
+
+        var produto1 = new Object();
+        produto1.nome = 'Caneta Bic';
+        produto1.preco = 1.5;
+        produto1.qtde = 25;
+
+        produto1.comprar = function(qtd){
+            if(!qtd){ //se não passar nenhuma qtde então comprou apenas uma caneta
+                qtd = 1;
+            } 
+                console.log('Comprou caneta');
+                this.qtde = this.qtde - qtd;
+                console.log(this.qtde);
+        }
+
+        var msg = '';
+        
+        msg += 'Nome: ' + produto1.nome + '</br>';
+        msg += 'Preço: ' + produto1.preco + '</br>';
+        msg += 'Quantidade no estoque: ' + produto1.qtde + '</br>';
+
+        output.innerHTML = msg;
+
+    </script>
+   
+</body>
+
+</html>
